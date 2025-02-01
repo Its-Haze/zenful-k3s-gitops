@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/Its-Haze/zenful-k3s-gitops.git
+    targetRevision: HEAD
+    path: base/argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

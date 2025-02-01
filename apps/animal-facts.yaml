@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: animal-facts
+  namespace: animal-api
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Its-Haze/animal-api-gitops.git
+    targetRevision: HEAD
+    path: .
+  destination:
+    namespace: animal-api
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
