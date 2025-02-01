@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Its-Haze/animal-api-gitops.git
+    repoURL: https://github.com/animal-facts/gitops.git
     targetRevision: HEAD
     path: .
   destination:
