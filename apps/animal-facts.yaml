@@ -9,8 +9,8 @@ spec:
     repoURL: https://github.com/animal-facts/gitops.git
     targetRevision: HEAD
     path: .
-    directory:
-      recurse: true
+    kustomize:
+      forceCommonLabels: true
   destination:
     namespace: default
     server: https://kubernetes.default.svc
