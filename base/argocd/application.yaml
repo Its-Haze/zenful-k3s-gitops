@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: applications
   namespace: argocd
 spec:
   destination:
@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/Its-Haze/zenful-k3s-gitops.git
     targetRevision: HEAD
-    path: base/argocd
+    path: apps
   syncPolicy:
     automated:
       prune: true
