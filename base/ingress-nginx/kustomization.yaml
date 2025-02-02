@@ -7,4 +7,5 @@ resources:
 - service.yaml
 - serviceaccount.yaml
 - configmap.yaml
+- ingressclass.yaml
 - deployment.yaml
