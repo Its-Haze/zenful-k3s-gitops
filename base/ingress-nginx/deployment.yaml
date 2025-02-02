@@ -34,7 +34,13 @@ spec:
             containerPort: 80
           - name: https
             containerPort: 443
-        resources:  # 🔹 Add resource limits & requests
+        readinessProbe:  # Add readiness probe
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:  # Add resource limits & requests
           requests:
             cpu: "250m"
             memory: "128Mi"
