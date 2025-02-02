@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configuration
+  namespace: ingress-nginx
+data:
+  enable-real-ip: "true"
+  proxy-buffer-size: "64k"
+  use-forwarded-headers: "true"
