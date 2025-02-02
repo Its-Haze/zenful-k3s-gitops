@@ -13,6 +13,12 @@ spec:
       labels:
         app: ingress-nginx
     spec:
+      nodeSelector:
+        node-role.kubernetes.io/master: "true"
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
       serviceAccountName: ingress-nginx
       containers:
       - name: controller
