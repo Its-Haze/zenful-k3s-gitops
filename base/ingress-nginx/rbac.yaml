@@ -10,6 +10,7 @@ rules:
       - pods
       - nodes  # Allow reading node information
       - secrets  # Allow reading TLS certificates
+      - configmaps  # Allow reading ConfigMaps
       - events  # Allow creating events
     verbs: ["get", "list", "watch", "create"]
   - apiGroups: ["networking.k8s.io"]
