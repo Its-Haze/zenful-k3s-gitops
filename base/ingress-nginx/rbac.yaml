@@ -9,8 +9,9 @@ rules:
       - endpoints
       - pods
       - nodes  # Allow reading node information
-      - configmaps
-    verbs: ["get", "list", "watch"]
+      - secrets  # Allow reading TLS certificates
+      - events  # Allow creating events
+    verbs: ["get", "list", "watch", "create"]
   - apiGroups: ["networking.k8s.io"]
     resources:
       - ingressclasses
