@@ -9,8 +9,6 @@ spec:
     repoURL: https://github.com/dj-braum/gitops.git
     targetRevision: HEAD
     path: .
-    kustomize:
-      forceCommonLabels: true
   destination:
     namespace: braum
     server: https://kubernetes.default.svc

@@ -1,1 +1,4 @@
 documentation
+apps/secrets/default-sa-patch.yaml
+apps/secrets/ghrc-secret.yaml
+**/**secret**

@@ -9,8 +9,6 @@ spec:
     repoURL: https://github.com/animal-facts/gitops.git
     targetRevision: HEAD
     path: .
-    kustomize:
-      forceCommonLabels: true
   destination:
     namespace: animal-api
     server: https://kubernetes.default.svc
